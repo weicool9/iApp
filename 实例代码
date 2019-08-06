@@ -7,7 +7,7 @@ java(背景颜色,null,"android.graphics.Color.parseColor","String","#00ff00")
 java(null, fab, "android.widget.ImageView.setColorFilter", "int", 图标颜色)
 java(背景颜色,null,"android.content.res.ColorStateList.valueOf","int",背景颜色)
 java(null, fab, "android.support.design.widget.FloatingActionButton.setBackgroundTintList","android.content.res.ColorStateList",背景颜色)
-
+【
 【base64加解密】
 
 //Base64编码：
@@ -38,17 +38,17 @@ tw(原文)
 
 //作者:残页
 
-
+【
 【耳机是否插入】
 java(音频管理器,activity,"android.content.Context.getSystemService","String","audio")
 java(wh,音频管理器,"android.media.AudioManager.isWiredHeadsetOn")
 ss("耳机插入状态为："+wh,so)
 tw(so)
-
+【
 【获取当前应用悬浮窗权限】
 java(opps,null,"android.provider.Settings.canDrawOverlays","android.content.Context",activity)
 tw(opps)
-
+【
 【跳转悬浮窗设置界面】
 sit(a, "action", "android.intent.action.VIEW")
 sit(a, "action", "android.settings.action.MANAGE_OVERLAY_PERMISSION")
@@ -57,7 +57,7 @@ javax(one,activity,类,"getPackageName")
 ss("package:"+one,pk)
 sit(a, "data", pk)
 uit(a, "chooser", "设置悬浮窗权限")
-
+【
 【自定义tws背景等】
 
 //需要一个容器
@@ -93,7 +93,7 @@ us(文本,"textcolor","#0000ff")
 
 
 
-
+【
 【图片黑白化】
 
 //sbp("@chbar.jpg",bmp)
@@ -117,7 +117,7 @@ us(2,"src",图片)
 
 
 
-
+【
 【获取当前软件相关信息】
 
 javax(pm,activity,"android.content.ContextWrapper","getPackageManager")
@@ -148,14 +148,14 @@ javanew(时间, "java.util.Date", "long", time)
 java(更新时间, 格式, "java.text.DateFormat.format", "java.util.Date", 时间)
 //本应用最后一次更新时间
 syso(更新时间)
-
+【
 【强制隐藏输入法】
 java(acit,activity,"android.content.ContextWrapper.getApplicationContext")
 java(windows,activity,"android.content.Context.getSystemService","String","input_method")
 java(getact,activity,"android.app.Activity.getCurrentFocus")
 java(win,getact,"android.view.View.getWindowToken")
 java(null,windows,"android.view.inputmethod.InputMethodManager.hideSoftInputFromWindow","android.os.IBinder",win,"int","0")
-
+【
 【获取电量信息】
 javanew(intentFilter,"android.content.IntentFilter","String","android.intent.action.BATTERY_CHANGED")
 java(batteryStatus,activity,"android.content.Context.registerReceiver","android.content.BroadcastReceiver",null,"android.content.IntentFilter",intentFilter)
@@ -187,7 +187,7 @@ ss("当前电池电量：" + level + "
 最大电池电量：" + scale,msg)
 tw(msg)
 
-
+【
 【文件夹相关操作】
 
 s file="shixin/iapp"
@@ -211,7 +211,7 @@ syso(删除状态)
 
 
 
-
+【
 【自定义utw弹窗】
 cls("android.app.AlertDialog", 弹窗子类)
 s cls = "android.app.AlertDialog$Builder"
@@ -283,7 +283,7 @@ ngde(a, b, c, d, f)
 //背景
 us(don,"background",f)
 
-
+【
 【设置布局单个或多个圆角】
 //iyu调用代码
 
@@ -313,7 +313,7 @@ public static void setBackground(Activity activity, int id, int yja, int yjb, in
   {
   }
 }
-
+【
 
 【修改浮动按钮颜色】
 gvs(4,fab)
@@ -323,7 +323,7 @@ java(背景颜色,null,"android.graphics.Color.parseColor","String","#00ff00")
 java(null, fab, "android.widget.ImageView.setColorFilter", "int", 图标颜色)
 java(背景颜色,null,"android.content.res.ColorStateList.valueOf","int",背景颜色)
 java(null, fab, "android.support.design.widget.FloatingActionButton.setBackgroundTintList","android.content.res.ColorStateList",背景颜色)
-
+【
 【获取文件/文件夹创建时间】
 fdir("%iApp/Userimg",file)
 
@@ -336,14 +336,14 @@ javanew(格式, "java.text.SimpleDateFormat", "String", "yyyy年MM月dd日 HH时
 java(时间, 格式, "java.text.DateFormat.format", "java.util.Date", tims)
 
 syso(时间)
-
+【
 【调整当前屏幕亮度】
 java(window,activity,"android.app.Activity.getWindow")
 java(lp,window,"android.view.Window.getAttributes")
 //0-1之间
 javass(nu,lp,"android.view.WindowManager$LayoutParams","screenBrightness",0.55)
 javax(null,window,"android.view.Window","setAttributes","android.view.WindowManager$LayoutParams",lp)
-
+【
 【高斯模糊】
 s 路径="%tumblr/6f319d21-827c-486d-9ecf-11541aaea3c2.jpg"
 s 半径="4"
@@ -380,22 +380,22 @@ java(null,sb,"android.renderscript.BaseObj.destroy")
 
 //最后输出img，可以设置src或者bg
 us(1,"background",img)
-
+【
 【编辑框错误提示】
 gvs(2,编辑框)
 java(null,编辑框,"android.widget.TextView.setError","CharSequence","错误提示")
-
+【
 【普通列表快速拖动条】
 gvs(12,列表)
 java(null,列表,"android.widget.AbsListView.setFastScrollEnabled","boolean","true")
 //v7列表不能用
 //拖动条默认颜色为白色，在列表大于一定数量才有
-
+【
 【控件透明度】
 gvs(1,控件)
 //0-1之间
 java(null,控件,"android.view.View.setAlpha","float",0.5)
-
+【
 【判断vpn是否开启】
 s isVpn = false
 java(nis,null,"java.net.NetworkInterface.getNetworkInterfaces")
@@ -426,20 +426,21 @@ else
   syso("没有抓包")
 }
 
-
+【
 【java修改图片颜色】
 gvs(8,view)
 
 java(c,null,"android.graphics.Color.parseColor","String","#212121")
 javags(mode,null,"android.graphics.PorterDuff$Mode","SRC_ATOP")
 java(null,view,"android.widget.ImageView.setColorFilter","int",c,"android.graphics.PorterDuff$Mode",mode)
-
+【
 【获取手机电量】
 java(管理器,activity,"android.app.Activity.getSystemService","String","batterymanager")
 //初始化
 java(a,管理器,"android.os.BatteryManager.getIntProperty","int",4)
 //获取剩余电量，加上%就是手机剩余的电量
 tw(a)
+【
 【v7列表的多种用法】
 //竖直列表
 gvs(4,对象)
@@ -469,7 +470,7 @@ cls("android.support.v7.widget.StaggeredGridLayoutManager",布局管理类)
 javanew(布局,布局管理类,"int",2,"int",1)
 javax(null,对象,列表类,"setLayoutManager","android.support.v7.widget.RecyclerView$LayoutManager",布局)
 
-
+【
 【java设置手机壁纸】
 //初始化包
 cls("android.app.WallpaperManager",wm)
@@ -487,7 +488,7 @@ javax(null,Wallm,wm,"setBitmap",bitp,image)
 
 //需要权限<uses-permission android:name="android.permission.SET_WALL_PAPER"/>应该是这个我手写的或者百度安卓设置壁纸权限
 
-
+【
 【图片圆角】
 sbp("图片",bitmap)
 
@@ -499,14 +500,14 @@ java(null,sss.drawable,"android.support.v4.graphics.drawable.RoundedBitmapDrawab
 //圆角度数
 
 us(控件id,"background",sss.drawable)
-
+【
 【状态栏白底黑字】
 java(cs, activity, "android.app.Activity.getWindow")
 java(cs2, cs, "android.view.Window.getDecorView")
 java(null, cs2, "android.view.View.setSystemUiVisibility", "int", "8192")
 //设置状态栏透明(沉浸式)
 java(null, cs, "android.view.Window.addFlags", "int", "67108864")
-
+【
 【输入法相关】
 
 说明：此代码可以解决输入法弹出的时候遮住你的控件/让布局乱动的问题
@@ -530,7 +531,7 @@ s flag = 18
 java(window,activity,"android.app.Activity.getWindow")
 java(null,window,"android.view.Window.setSoftInputMode","int",flag)
 
-
+【
 【控件转图片】
 gvs(1,控件)
 
@@ -560,11 +561,11 @@ javanew(画板,"android.graphics.Canvas","android.graphics.Bitmap",图片)
 java(null,控件,"android.view.View.draw","android.graphics.Canvas",画板)
 
 us(6,"src",图片)
-
+【
 【禁止截图】
 java(a,activity,"android.app.Activity.getWindow")
 java(null,a,"android.view.Window.addFlags","int",8192)
-
+【
 【拉起iApp导入源码】
 fdir("@a.iApp",位置)
 //源码位置
@@ -576,7 +577,7 @@ sit(a,"classname","com.iapp.app","com.iapp.app.logoActivity2")
 sit(a, "action", "android.intent.action.VIEW")
 java(null,activity,"Context.startActivity","android.content.Intent",a)
 java(null,null,"android.content.Intent.createChooser","android.content.Intent",a,"String","iApp")
-
+【
 【MD风格提示】
 //iyu调用代码
 fn md.tw("MD提示！")
@@ -604,7 +605,7 @@ to:setView(cv)
 to:show()
 end
 
-
+【
 【mjava获取网络图片】
 //iyu调用代码
 t()
@@ -655,18 +656,19 @@ import android.graphics.drawable.*;
 
     }
     
-
+【
 【java获取手机壁纸】
 cls("android.app.WallpaperManager",class)
 javax(wm,null,class,"getInstance","Context",activity)
 javax(drawable,wm,class,"getDrawable")
 us(5,"src",drawable)
+【
 【隐藏浏览器放大缩小按钮】
 gvs(浏览器控件ID,wv)
 java(ws,wv,"android.webkit.WebView.getSettings")
 java(null,ws,"android.webkit.WebSettings.setBuiltInZoomControls","boolean",true)
 java(null,ws,"android.webkit.WebSettings.setDisplayZoomControls","boolean",false)
-
+【
 【mjava调用图库】
 //iyu
 调用:
@@ -763,7 +765,7 @@ public String getImagePath(Context context, Uri uri, String selection)
   return path;
 }
 
-
+【
 【WebView网页放大缩小】
 放大:
 gvs(1,ss.wv)
@@ -772,7 +774,7 @@ java(c,ss.wv,"android.webkit.WebView.zoomIn")
 缩小:
 gvs(1,ss.wv)
 java(c,ss.wv,"android.webkit.WebView.zoomOut")
-
+【
 【设置控件阴影】
 gvs(2, 标题栏)
 //2为控件
@@ -785,7 +787,7 @@ javanew(mmr,"android.media.MediaMetadataRetriever")
 java(null,mmr,"android.media.MediaMetadataRetriever.setDataSource","String",路径)
 java(图片,mmr,"android.media.MediaMetadataRetriever.getFrameAtTime","long",0)
 //%a.mp4为视频路径，最后的图片使用us就可以设置到src或者backound，最后的0换第0帧，可改变，但不得超过视频总帧数
-
+【
 【Toolbar设置返回键】
 s id=3
 //toolbar的id
@@ -799,7 +801,7 @@ utb("set", "leftck", id)
 {
   tw("返回")
 }
-
+【
 【Toolbar标题栏图标颜色】
 s id=3
 //toolbar的id

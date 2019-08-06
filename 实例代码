@@ -781,6 +781,7 @@ gvs(2, 标题栏)
 zdp(4, 标题栏阴影)
 //4为阴影厚度
 java(null,标题栏,"android.view.View.setElevation", "float",标题栏阴影)
+【
 【java获取视频任意一帧】
 fdir("%a.mp4",路径)
 javanew(mmr,"android.media.MediaMetadataRetriever")
